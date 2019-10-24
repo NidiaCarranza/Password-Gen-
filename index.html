@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Password Generator</title>
+<!---Link to CSS file-->
+<link rel="stylesheet" href="./assets/CSS/style.css">
+<!---BOOTSTRAP LINK (normalize is not needed because it is included in  bootstrap)-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+</head>
+<body>
+<br></br>
+<br></br>
+    <!---first bootstrap box -->
+    <div class="container"> 
+        <div class="row">
+            <div class="col-lg-8 col-sm-12 mx-auto"> 
+                <!---Big header/title-->
+                <div class="head">
+                    <h1>Password Generator</h1>
+               </div>
+            </div>      
+        </div>
+            <!--secondary title for specific instructions and what not ---->
+                <div class="title">
+                        <h2>Generate a password below by sliding to the total number of values needed</h2>
+                </div>
+                
+                   <!---The box for the output generated password -->
+                    <div class= "message">
+                         <input type="text" id="displayPassword" class="passwordStyle">
+                        <br>    
+                    <!--Slider for the total number -->
+                    <input type="range" min="8" max="128" value="10" name="slider" id="slider">
+                        <br />
+                        <p id="length">Length: 10</p>
+                    <!--Special characters option/checkbox-->
+                    <input type="checkbox" id="specials" ng-model="isFull" checked>  
+                    <label for="specialChar">Include Special Characters</label>
+                
+                    <!---COPY into clipboard -->
+                <div class="buttons">
+                    <button id=generateButton onclick= "generate()" >Generate</button>
+                    <button id=copyButton onclick= "copyPassword()" >Copy to Clipboard</button>
+                </div>
+    <!---LINKE TO external JS-->
+    <script src="./assets/JS/script.js"></script>
+                    
+    </div>
+
+
+
+</body>
+</html>
